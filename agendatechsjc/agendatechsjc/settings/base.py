@@ -159,6 +159,9 @@ LOCAL_APPS = (
 
 BOWER_INSTALLED_APPS = (
     'bootstrap#3.2.0',
+    'jquery#2.1.1',
+    'font-awesome-bower#4.2.0',
+    'modernizr#~2.8.3',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

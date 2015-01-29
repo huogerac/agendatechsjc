@@ -9,17 +9,28 @@
         
         <title>{% block title %}{{ project_name }}{% endblock %}</title>
 
-        <!-- Basic CSS files -->
         {% block css %}
-		<link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-      		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    	<![endif]-->
-    	
+
+        <!-- 3rd css frameworks imported using bower -->
+    	<link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'font-awesome-bower/css/font-awesome.css' %}" rel="stylesheet">
+
+        <!-- Bootstrap Core CSS -->
+        <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+
+        <!-- Custom CSS -->
         <link href="{% static 'themes/default/css/base.css' %}" rel="stylesheet" media="screen">
-		<style id="holderjs-style" type="text/css"></style>
+
+        <!-- Custom Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
 		{% endblock css %}
 
 		<!--  USE THE extracss BLOCK to add CSS here -->
@@ -50,86 +61,52 @@
         {% block topheader_area %}
         {% endblock topheader_area %}
 
-		<div id="body-area" class="container"> 
+		<!--  USE THE navbar_area BLOCK to add content here -->
+		{% block navbar_area %}
+			{% block navbar %}
+			{% endblock navbar %}
+		{% endblock navbar_area %}
 
-			<!--  USE THE navbar_area BLOCK to add content here -->
-			{% block navbar_area %}
-			<div class="header">
-				<div class="row">
-					<div class="col-lg-7">
-			        	<h3 class="text-muted">{{ project_name }}</h3>
-			        </div>					
-					<div class="col-lg-5">
-				        <ul class="nav nav-pills pull-right">
-							{% block navbar %}
+		<!--  USE THE header_area BLOCK to add content here -->
+		{% block header_area %}
+			{% block header %}
+			{% endblock header %}
+		{% endblock header_area %}
 
-							{% endblock navbar %}
-				        </ul>
-					</div>
-				</div>
-			</div>
-			{% endblock navbar_area %}
+		<!--  USE THE content_area BLOCK to add the MAIN CONTENT -->
+		{% block content_area %}
 
-			<!--  USE THE header_area BLOCK to add content here -->
-			{% block header_area %}
-					{% block header %}
-					{% endblock header %}
-			{% endblock header_area %}
+			<!--  USE THE slide_area BLOCK to add content here -->
+			{% block slider_area %}
+			{% endblock slider_area %}
 
-			<!--  USE THE content_area BLOCK to add the MAIN CONTENT -->
-			{% block content_area %}
-			<div id="container-area">
+			<!--  OR USE THE content BLOCK DIRECTLY -->
+			{% block content %}
+			{% endblock content %}
 
-				<!--  USE THE slide_area BLOCK to add content here -->
-				{% block slider_area %}
-				{% endblock slider_area %}
+		{% endblock content_area %}
 
-				<!--  OR USE THE content BLOCK DIRECTLY -->
-				{% block content %}
+		<!--  USE THE extra_content_area BLOCK to add content here -->
+		{% block extra_content_area %}			
+		{% endblock extra_content_area %}
 
-				{% endblock content %}
+		<!--  USE THE footer_area BLOCK to add content here -->
+		{% block footer_area %}
 
-			</div>
-			{% endblock content_area %}
+			<!--  USE THE footer_top BLOCK to add content here -->
+        	{% block footer_top %}
+            {% endblock footer_top %}	
 
-			<!--  USE THE extra_content_area BLOCK to add content here -->
-			{% block extra_content_area %}			
-			{% endblock extra_content_area %}
-
-			<!--  USE THE footer_area BLOCK to add content here -->
-			{% block footer_area %}
-		    <footer id="footer-area">
-
-					<!--  USE THE footer_top BLOCK to add content here -->
-                	{% block footer_top %}
-                    {% endblock footer_top %}	
-
-					<!--  USE THE footer BLOCK to add content here -->
-					{% block footer %}
-					{% endblock footer %}
+			<!--  USE THE footer BLOCK to add content here -->
+			{% block footer %}
+			{% endblock footer %}
 
 
-		            <!--  USE THE footer_bottom BLOCK to add content here -->
-		            {% block footer_bottom %}
-					<div class="footer">
-						<br/><br/>
-						<p><abbr title="Page:{% block footer_page_name %}None{% endblock %}">HTML</abbr></p>
-						<p class="footerBottom">Copyright © 2014 - {{ project_name }}</p>
-						<p><strong>Policies:</strong>&nbsp;&nbsp;
-							<a href="">Privacy Policy</a>
-							&nbsp;&nbsp; - &nbsp;&nbsp; 
-							<a href="">Terms of Use</a>
-						</p>
-						<p class="footerBottom">Magically Created by Djenie.</p>
-						<p>
-						</p>
-					</div>
-					{% endblock footer_bottom %}
+            <!--  USE THE footer_bottom BLOCK to add content here -->
+            {% block footer_bottom %}
+			{% endblock footer_bottom %}
 
-		    </footer>
-		    {% endblock footer_area %}
-
-		</div>
+	    {% endblock footer_area %}
 
 
         <!--  USE THE extrabody_bottom BLOCK to add content here -->

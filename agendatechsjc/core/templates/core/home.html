@@ -1,7 +1,257 @@
 {% extends 'core/base_core.html' %}
 
+{% load static %}
+
 {% block content %}
-  <div>
-    <h1>Welcome</h1>
-  </div>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top">Start Bootstrap</a>
+            </li>
+            <li>
+                <a href="#top">Home</a>
+            </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#services">Services</a>
+            </li>
+            <li>
+                <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1 style="font-size: 8.5em; font-weight: 700; color: white;">AgendaTech SJC</h1>
+            <h3 style="font-size: 38px; color: burlywood;">Python, Ruby, Java, .Net, PHP, Javascript ...</h3>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg" style="font-size: 26px;">Ver Eventos</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Participe dos eventos de tecnologia em nossa região!</h2>
+                    <p class="lead">Este anos iremos ultrapassar os 52 eventos de 2014 <a target="_blank" href="http://join.deathtothestockphoto.com/">Saiba mais</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <center>
+                    <h2>São José dos Campos</h2>
+                    <hr class="small">
+                    <p>ATENÇÃO: Site em construção!!! ideas? sugestões? ameaças? Fale com a galera do #HoraExtra - Quintas 19h30 Turco Gordo</p>
+                        
+                    </center>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <time datetime="2015-02-28" class="icon">
+                              <em>Sábado</em>
+                              <strong>Fevereiro</strong>
+                              <span>28</span>
+                            </time>
+                        </div>
+                        <div class="col-md-9">
+                            <h4>&nbsp</h4>
+                            <h4><strong>DevInVale</strong></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-light">Call4Papers</a>
+                            <a href="#" class="btn btn-light">Visitar</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <time datetime="2015-02-28" class="icon">
+                              <em>Sábado</em>
+                              <strong>Fevereiro</strong>
+                              <span>28</span>
+                            </time>
+                        </div>
+                        <div class="col-md-9">
+                            <h4>&nbsp</h4>
+                            <h4><strong>DevInVale</strong></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-light">Call4Papers</a>
+                            <a href="#" class="btn btn-light">Visitar</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <time datetime="2015-02-28" class="icon">
+                              <em>Sábado</em>
+                              <strong>Fevereiro</strong>
+                              <span>28</span>
+                            </time>
+                        </div>
+                        <div class="col-md-9">
+                            <h4>&nbsp</h4>
+                            <h4><strong>DevInVale</strong></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-light">Call4Papers</a>
+                            <a href="#" class="btn btn-light">Visitar</a>
+                        </div>
+                    </div>
+
+
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Parceiros</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="{% static 'themes/default/img/portfolio-1.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="{% static 'themes/default/img/portfolio-2.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="{% static 'themes/default/img/portfolio-3.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="{% static 'themes/default/img/portfolio-4.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <a href="#" class="btn btn-dark">View More Items</a>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>Cadastre seu evento.</h3>
+                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
+                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>AgendaTech SJC</strong></h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 {% endblock %}
+
+{% block extrajs_bottom %}
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+{% endblock extrajs_bottom %}
