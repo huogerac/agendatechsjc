@@ -76,7 +76,7 @@ def staging():
     env.server_url = 'agendatechsjc.na-inter.net'
     env.user = __get_env_pass__('user_staging')
     env.password = __get_env_pass__('staging')
-    env.targetdir = '/home/user/envs'
+    env.targetdir = '/home/%s/envs' % env.user
 
 
 def _install_so_dependencies():
